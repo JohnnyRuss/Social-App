@@ -1,0 +1,10 @@
+@mixin popUp {
+  @keyframes popUp {
+    0% {
+      transform: translate(0, 50%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+}

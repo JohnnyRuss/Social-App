@@ -1,0 +1,31 @@
+@use "./fontSize" as *;
+@use "./fontWeight" as *;
+@use "./colors" as *;
+
+@function fontSize($size) {
+  @return map-get($fontSize, $size);
+}
+
+@function fontWeight($weight) {
+  @return map-get($fontWeight, $weight);
+}
+
+@function collors($collor) {
+  @return map-get($collors, $collor);
+}
+
+@mixin fontSize($size) {
+  font-size: fontSize($size);
+}
+
+@mixin fontWeight($weight) {
+  font-weight: fontWeight($weight);
+}
+
+@mixin collor($collor, $background: false) {
+  @if $background {
+    background: collors(($collor));
+  } @else {
+    color: collors($collor);
+  }
+}

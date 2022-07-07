@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  list-style: none;
+  padding-top: 1rem;
+
+  .item {
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+
+  @for $i from 2 through 8 {
+    .item:nth-child(#{$i}) {
+      transform: translateX(-25% * $i);
+    }
+  }
+}
+
+@media (max-width: 62.5em) {
+  .container {
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 55em) {
+  .container {
+    justify-content: center;
+    transform: translateX(10%);
+  }
+}

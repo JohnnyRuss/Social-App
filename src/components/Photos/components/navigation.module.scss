@@ -1,0 +1,12 @@
+@use '../../../styles/helpers/helpers' as *;
+
+@function color($collor) {
+  @return map-get($collors, $collor);
+}
+
+.active {
+  display: inline-block;
+  border-bottom: 2px solid color('blueColor');
+  @include collor('blueColor');
+  padding: 1rem;
+}

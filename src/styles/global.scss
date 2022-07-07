@@ -1,0 +1,47 @@
+@use './helpers//helpers' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.2;
+  @include collor(whiteColor, true);
+  @include collor(blackColor);
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+a,
+button {
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+@include scrollBar('body');
+
+@include media-680 {
+  html {
+    font-size: 56.25%;
+  }
+}

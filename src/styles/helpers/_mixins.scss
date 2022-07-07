@@ -1,0 +1,94 @@
+@use './colors' as *;
+
+@function collor($collor) {
+  @return map-get($collors, $collor);
+}
+
+@mixin flexBox($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flexProperty($justify: flex-start, $align: flex-start) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin gridBox($column: 2, $row: 2) {
+  display: grid;
+  grid-template: repeat($row) / repeat($column);
+}
+
+@mixin gridProperty($justify: flex-start, $align: flex-start) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin gridBoxAutoFill($min: auto) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+}
+
+@mixin gridBoxAutoFit($min: auto) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+}
+
+@mixin fitImage {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin fitBgImage {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin scrollBar($element) {
+  #{$element}::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  #{$element}::-webkit-scrollbar-thumb {
+    background: collor(blackColor);
+    border-radius: 1rem;
+  }
+
+  #{$element}::-webkit-scrollbar-track {
+    background: collor(lightGreyColor);
+    border-radius: 2rem;
+  }
+}
+
+@mixin fontFamily($family: 'Biter') {
+  font-family: $family, serif;
+}
+
+@mixin border($collor: black, $radius: 1rem) {
+  border: 1px solid $collor;
+  border-radius: $radius;
+}
+
+@mixin boxShadowBlack($spread: 15px, $radial: 5px, $opacity: 0.3) {
+  box-shadow: 1px 2px $spread $radial rgba(0, 0, 0, $opacity);
+}
+
+@mixin boxShadowWhite($spread: 15px, $radial: 5px, $opacity: 0.3) {
+  box-shadow: 1px 2px $spread $radial rgba(255, 255, 255, $opacity);
+}
+
+@mixin textShadow($horizontal: 2px, $vertical: 3px, $spread: 5px, $opacity: 0.3) {
+  text-shadow: $horizontal $vertical $spread rgba(0, 0, 0, $opacity);
+}
+
+@mixin gradientBackground(
+  $mainColor: collor(gradientMainColor),
+  $secondaryColor: collor(mainColor),
+  $percentage: 45%
+) {
+  background-image: linear-gradient(to right bottom, $mainColor $percentage, $secondaryColor);
+}
