@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import { flexBox, flexProperty, fontSize } from '../../../styles/styled';
 
-export const Nav = styled.nav`
-  margin-top: 3rem;
-`;
+export const Nav = styled.nav``;
 
 export const NavList = styled.ul`
   list-style: none;
   ${flexBox()};
   ${flexProperty({ justify: 'space-between' })};
+  gap: 2rem;
   ${fontSize('smallSize')};
   height: 3rem;
   padding: 0 1.5rem;

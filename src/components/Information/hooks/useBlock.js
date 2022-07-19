@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import * as model from './model';
+import { destructureFormData, assignTarget } from './helpers';
 
 const validate = {
   addWorkPlace: model.validateAddWorkPlace,
@@ -38,7 +39,9 @@ const useBlock = (type, value) => {
     validate[type](output, warning, type);
     setError(warning);
 
-    console.log(output);
+    const dataForDB = assignTarget(formRef.current.name, output);
+
+    console.log(dataForDB);
 
     if (!warning.error) formRef.current.reset();
   }
@@ -47,16 +50,3 @@ const useBlock = (type, value) => {
 };
 
 export default useBlock;
-
-function destructureFormData(target, type, value) {
-  const formData = new FormData(target);
-  if (type === 'addBirthDate') formData.append('date', value);
-
-  const output = {};
-
-  for (const [key, value] of formData) {
-    output[key] = value;
-  }
-
-  return output;
-}

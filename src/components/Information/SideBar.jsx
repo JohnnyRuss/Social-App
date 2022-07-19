@@ -1,4 +1,4 @@
-import { SideBarContainer } from './components/SideBarStyled';
+import { SideBarContainer } from './components/SideBar/SideBarStyled';
 import { SideBarList } from './components';
 
 function SideBar() {

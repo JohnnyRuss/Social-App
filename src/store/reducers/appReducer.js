@@ -7,6 +7,7 @@ const appSlice = createSlice({
     createPostProcess: { error: false, pending: false, message: '' },
   },
   reducers: {
+    // USER COVER
     uploadProfileImg(state) {
       state.process.error = false;
       state.process.pending = true;
@@ -19,6 +20,7 @@ const appSlice = createSlice({
       state.process.message = '';
     },
 
+    // POST CRUD
     createPost(state) {
       state.createPostProcess.error = false;
       state.createPostProcess.pending = true;
@@ -41,18 +43,21 @@ const appSlice = createSlice({
 
     updatePost(state) {},
 
+    // POST REACTIONS
     reactOnPost() {},
 
     updateReactionOnPost() {},
 
     deleteReactionOnPost() {},
 
+    // COMMENT REACTIONS
     reactOnComment() {},
 
     updateReactionOnComment() {},
 
     deleteReactionOnComment() {},
 
+    // COMMENT CRUD
     addComment() {},
 
     updateComment() {},
@@ -64,6 +69,13 @@ const appSlice = createSlice({
     updateCommentReply() {},
 
     deleteCommentReply() {},
+
+    // USER INFO
+    updateUserInfo(stata) {},
+
+    deleteUserInfo(stata) {},
+
+    ////////////////////////
 
     setAppSuccess(state) {
       state.process.error = false;
@@ -82,25 +94,34 @@ const appSlice = createSlice({
 export const appReducer = appSlice.reducer;
 
 export const {
+  // USER COVER
   uploadProfileImg,
   uploadCoverImg,
+  // POST CRUD
   createPost,
-  deletePost,
-  updatePost,
   createPostSuccess,
   createPostError,
+  deletePost,
+  updatePost,
+  // POST REACTIONS
   reactOnPost,
   updateReactionOnPost,
   deleteReactionOnPost,
+  // COMMENT REACTIONS
   reactOnComment,
   updateReactionOnComment,
   deleteReactionOnComment,
+  // COMMENT CRUD
   addComment,
   updateComment,
   deleteComment,
   addCommentReply,
   updateCommentReply,
   deleteCommentReply,
+  // USER INFO
+  updateUserInfo,
+  deleteUserInfo,
+  /////////////////
   setAppSuccess,
   setAppError,
 } = appSlice.actions;

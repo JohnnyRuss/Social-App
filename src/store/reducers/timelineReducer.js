@@ -59,7 +59,7 @@ const timeleneSlice = createSlice({
       state.searchProcess.pending = false;
     },
 
-    clearSearchResults(state, { payload }) {
+    clearSearchResults(state) {
       state.searchResults = [];
     },
 
@@ -118,7 +118,6 @@ const timeleneSlice = createSlice({
     },
 
     // RELATED-POSTS-COMMENTS
-
     addRelatedPostComment(state, { payload }) {
       addComment({ payload, location: state.relatedPosts });
     },

@@ -14,7 +14,7 @@ function ContentItem({
 }) {
   return (
     <ContentItemContainer onClick={() => onClick(conversationId)}>
-      <Image dimention={['5rem', '5rem']} radius='50%' src={adressatImage.image} />
+      <Image dimention={['5rem', '5rem']} radius='50%' src={adressatImage?.image} />
       <InfoBox>
         <Author>{adressatName}</Author>
         <MiniBox direction={miniBoxDirection}>

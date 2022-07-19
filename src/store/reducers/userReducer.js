@@ -43,11 +43,11 @@ const userSlice = createSlice({
         coverImages: [],
         timelineImages: [],
       },
-      // pendingRequests: [],
-      // sentRequests: [],
+      filteredFriends: null,
     },
   },
   reducers: {
+    // USER
     getMe(state) {
       state.process.error = false;
       state.process.pending = true;
@@ -86,7 +86,7 @@ const userSlice = createSlice({
       state.process.message = '';
     },
 
-    // User-Cover & Media
+    // USER COVER & MEDIA
     setProfileImage(state, { payload }) {
       state.user.profileImg = {
         image: payload.image,
@@ -133,7 +133,10 @@ const userSlice = createSlice({
       );
     },
 
-    // Post
+    // USER INFO
+    setUserInfo(state, { payload }) {},
+
+    // POST CRUD
     setNewPost(state, { payload }) {
       state.user.posts.unshift({ ...payload, reactions: [], comments: [] });
     },
@@ -147,7 +150,7 @@ const userSlice = createSlice({
       state.user.posts.find((post) => post.id === postId).description = description;
     },
 
-    // Reactions
+    // POST REACTIONS
     addReactionOnPost(state, { payload }) {
       addPostReaction({ state: state.user, payload, location: state.user.posts });
     },
@@ -160,6 +163,7 @@ const userSlice = createSlice({
       deleteReactionOnPost({ payload, location: state.user.posts });
     },
 
+    // COMMENT REACTIONS
     addReactionOnComment(state, { payload }) {
       addCommentReaction({ state: state.user, payload, location: state.user.posts });
     },
@@ -172,7 +176,7 @@ const userSlice = createSlice({
       commentReactionDelete({ payload, location: state.user.posts });
     },
 
-    // Comments
+    // COMMENTS CRUD
     setNewComment(state, { payload }) {
       addComment({ payload, location: state.user.posts });
     },
@@ -197,6 +201,18 @@ const userSlice = createSlice({
       deleteCommentReply({ payload, location: state.user.posts });
     },
 
+    // EXTRA
+    setFilteredFriends(state, { payload }) {
+      state.user.filteredFriends = [];
+      state.user.filteredFriends = state.user.friends.filter((friend) =>
+        friend.userName.includes(payload)
+      );
+    },
+
+    resetFilteredFriends(state) {
+      state.user.filteredFriends = null;
+    },
+
     setPageError(state, { payload }) {
       state.process.error = true;
       state.process.pending = false;
@@ -208,28 +224,39 @@ const userSlice = createSlice({
 export const userReducer = userSlice.reducer;
 
 export const {
+  // USER
   getMe,
   getUser,
   setUser,
+  // USER COVER & MEDIA
   setProfileImage,
   setCoverImage,
   setUserMediaAlbums,
   resetUserMediaAlbums,
+  // USER INFO
+  setUserInfo,
+  // POST CRUD
   setNewPost,
   deleteUserPost,
   updateUserPost,
+  // POST REACTIONS
   addReactionOnPost,
   updatePostReaction,
   deletePostReaction,
+  // COMMENT REACTIONS
   addReactionOnComment,
   updateCommentReaction,
   deleteCommentReaction,
+  // COMMENTS CRUD
   setNewComment,
   updateExistingComment,
   deleteExistingComment,
   setNewCommentReply,
   updateExistingCommentReply,
   deleteExistingCommentReply,
+  // EXTRA
+  setFilteredFriends,
+  resetFilteredFriends,
   setPageError,
 } = userSlice.actions;
 

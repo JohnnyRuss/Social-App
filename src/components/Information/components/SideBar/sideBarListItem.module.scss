@@ -1,0 +1,22 @@
+%navPlace {
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.navLink {
+  @extend %navPlace;
+
+  &:hover {
+    background: rgba(242, 242, 242, 1);
+  }
+}
+
+.active {
+  @extend %navPlace;
+  
+  color: royalblue;
+  background: rgba(125, 176, 242, 0.3);
+}

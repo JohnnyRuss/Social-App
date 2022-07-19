@@ -1,3 +1,5 @@
+import { uid } from 'uid';
+
 function sendWarning(message, field, warning) {
   warning.error = true;
   warning.message = `please reference valid ${message}`;
@@ -54,6 +56,33 @@ function specialitiesArray(data) {
   delete data.tertiarySpeciality;
 }
 
+function destructureFormData(target, type, value) {
+  const formData = new FormData(target);
+  if (type === 'addBirthDate') formData.append('date', value);
+
+  const output = {};
+
+  for (const [key, value] of formData) {
+    output[key] = value;
+  }
+
+  return output;
+}
+
+function assignTarget(formTarget, formData) {
+  const assignAbleFields = [
+    'workPlace',
+    'education',
+    'language',
+    'familyMembers',
+    'politicianOpinion',
+    'religianOpinion',
+  ];
+
+  if (assignAbleFields.includes(formTarget)) return { [formTarget]: { ...formData, id: uid(25) } };
+  else return formData;
+}
+
 export {
   sendWarning,
   validateRequiredFields,
@@ -62,4 +91,6 @@ export {
   deleteUnnecesseryEmptyFields,
   separateDateProperty,
   specialitiesArray,
+  destructureFormData,
+  assignTarget,
 };

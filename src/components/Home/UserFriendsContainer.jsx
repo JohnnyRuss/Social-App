@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { UserFriendsBox } from './styled';
 
 function UserFriendsContainer({ children }) {

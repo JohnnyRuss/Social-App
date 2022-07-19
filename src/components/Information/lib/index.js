@@ -1,19 +1,11 @@
-export const LINKS = [
-  'all',
-  'job and education',
-  'living places',
-  'contact and basic information',
-  'family and relationships',
-  // 'details about you',
-  // 'life events',
-];
+import { uid } from 'uid';
 
-export function generateName(candidate) {
-  return candidate
-    .split(' ')
-    .map((peace, i) => {
-      if (i === 0) return peace;
-      else if (i !== 0) return peace[0].toUpperCase() + peace.slice(1, peace.length);
-    })
-    .join('');
-}
+export const LINKS = [
+  { path: 'review', title: 'review', id: uid(16) },
+  { path: 'jobAndEducation', title: 'job and education', id: uid(16) },
+  { path: 'livingPlaces', title: 'living places', id: uid(16) },
+  { path: 'contactAndBasicInformation', title: 'contact and basic information', id: uid(16) },
+  { path: 'familyAndRelationships', title: 'family and relationships', id: uid(16) },
+  // { path: 'detailsAboutYou', title: 'details about you', id: uid(16) },
+  // { path: 'lifeEvents', title: 'life events', id: uid(16) },
+];

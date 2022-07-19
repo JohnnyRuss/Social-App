@@ -1,11 +1,9 @@
-// Posts
-
+// POSTS
 export function deletePost({ payload, data }) {
   return data.filter((post) => post.id !== payload);
 }
 
-// Reactions
-
+// REACTIONS
 function reactionBody(data, state) {
   return {
     id: data._id,
@@ -84,8 +82,7 @@ export function commentReactionDelete({ payload, location }) {
   });
 }
 
-// Comments
-
+// COMMENTS
 export function addComment({ payload, location }) {
   //prettier-ignore
   const { data, state:{ postId, authorName, authorImage} } = payload;

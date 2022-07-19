@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { CommercialContainer, CommercialTitle } from './styled';
 
 function Commercial() {

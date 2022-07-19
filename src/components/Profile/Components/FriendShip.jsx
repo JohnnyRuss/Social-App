@@ -4,7 +4,14 @@ import { useFriendRequests } from '../../../hooks';
 import { getConversation } from '../../../store/reducers/conversationReducer';
 
 import { Container, BTN } from './friendShipStyled';
-import { UserFriendsIcon, CloseIcon, MessengerIcon } from '../../Layouts/Icons/icons';
+import {
+  AddToFriendsIcon,
+  ConfirmFriendRequestIcon,
+  CancelFriendRequestIcon,
+  DeleteFriendRequestIcon,
+  FriendIcon,
+  MessengerIcon,
+} from '../../Layouts/Icons/icons';
 
 function FriendShip({ profileOwner }) {
   //prettier-ignore
@@ -31,26 +38,26 @@ function FriendShip({ profileOwner }) {
     <Container>
       {none && (
         <BTN onClick={() => sendFriendRequest(profileOwner)}>
-          <UserFriendsIcon /> add to friends
+          <AddToFriendsIcon /> add to friends
         </BTN>
       )}
       {alreadySent && (
         <BTN onClick={() => cancelFriendRequest(profileOwner)}>
-          <CloseIcon /> cancel request
+          <CancelFriendRequestIcon /> cancel request
         </BTN>
       )}
       {isFriend && (
         <BTN>
-          <UserFriendsIcon /> friend
+          <FriendIcon /> friend
         </BTN>
       )}
       {isPending && (
         <>
           <BTN onClick={() => confirmFriendRequest(profileOwner)}>
-            <UserFriendsIcon /> confirm friend
+            <ConfirmFriendRequestIcon /> confirm friend
           </BTN>
           <BTN onClick={() => deleteFriendRequest(profileOwner)}>
-            <CloseIcon /> delete request
+            <DeleteFriendRequestIcon /> delete request
           </BTN>
         </>
       )}

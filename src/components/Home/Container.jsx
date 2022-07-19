@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ContainerBox } from './styled';
 
 function Container({ children }) {

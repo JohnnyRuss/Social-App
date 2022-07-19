@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { ActiveUserItem, ActiveUserFigure, ActiveUserName } from './styled';
 import { Image } from '../Layouts';
 

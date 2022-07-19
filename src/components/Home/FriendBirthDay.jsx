@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { BirthdayBox, BirthDayInfo } from './styled';
 import { Image } from '../Layouts';
 

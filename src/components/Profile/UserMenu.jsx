@@ -9,7 +9,7 @@ function UserMenu() {
       <NavLink to='posts' className={({ isActive }) => (isActive ? styles.active : '')}>
         <UserMenuListItem>posts</UserMenuListItem>
       </NavLink>
-      <NavLink to='information' className={({ isActive }) => (isActive ? styles.active : '')}>
+      <NavLink to='information/review' className={({ isActive }) => (isActive ? styles.active : '')}>
         <UserMenuListItem>information</UserMenuListItem>
       </NavLink>
       <NavLink to='friends' className={({ isActive }) => (isActive ? styles.active : '')}>

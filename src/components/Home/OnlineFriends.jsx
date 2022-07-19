@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { OnlineFriendsBox, OnlineBoxTitle, ActiveUserList } from './styled';
 import ActiveUser from './ActiveUser';
 

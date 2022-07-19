@@ -92,9 +92,9 @@ export function validateAddEmail(data, warning) {
 }
 
 export function validateAddWebSite(data, warning) {
-  const { website } = data;
-  const validWebsite = isURL(website);
-  if (!website) return validateRequiredFields('phoneNumber', warning);
+  const { webSite } = data;
+  const validWebsite = isURL(webSite);
+  if (!webSite) return validateRequiredFields('phoneNumber', warning);
   else if (!validWebsite) sendWarning('website', 'website', warning);
 }
 
@@ -159,6 +159,9 @@ export function validateAddBirthDate(data, warning) {
     warning.error = true;
     warning.message = 'you need to be at least 16 years old to use this app';
   }
+
+  data.birthDate = date;
+  delete data.date;
 }
 
 export function validateAddFamilyMember(data, warning) {}

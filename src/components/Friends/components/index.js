@@ -5,3 +5,5 @@ export { default as FriendsListUserName } from './FriendsListUserName';
 export { default as FriendsListOptBTN } from './FriendsListOptBTN';
 export { default as FriendsListOptModal } from './FriendsListOptModal';
 export { default as FriendsListOptModalItem } from './FriendsListOptModalItem';
+export { default as SearchAndHeadingNavigation } from './SearchAndHeadingNavigation';
+export { default as RequestsContainer } from './RequestsContainer';

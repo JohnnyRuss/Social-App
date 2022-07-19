@@ -1,4 +1,12 @@
 import styled from 'styled-components';
+import {
+  color,
+  boxShadowBlack,
+  scrollBar,
+  flexBox,
+  flexProperty,
+  fitImage,
+} from '../../../styles/styled';
 
 export const ModalBox = styled.div`
   position: fixed;
@@ -6,8 +14,8 @@ export const ModalBox = styled.div`
   top: 0;
   left: 10rem;
   padding-bottom: 1rem;
-  background-color: white;
-  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  background: ${color('whiteColor')};
+  ${boxShadowBlack()};
 `;
 
 export const ContentBox = styled.div`
@@ -15,20 +23,18 @@ export const ContentBox = styled.div`
   padding: 0 1rem;
   width: 26rem;
   max-height: 30rem;
-  overflow: scroll;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: white;
   position: relative;
-  ${({ pending }) => (pending ? 'min-height: 5rem;' : '')}
+  ${flexBox('column')};
+  gap: 1rem;
+  background: ${color('whiteColor')};
+  ${scrollBar()};
+  ${({ pending }) => (pending ? 'min-height: 5rem;' : '')};
 `;
 
 export const Result = styled.div`
-  display: flex;
+  ${flexBox()};
+  ${flexProperty({ align: 'center' })};
   gap: 1rem;
-  align-items: center;
 `;
 
 export const ResultFigure = styled.figure`
@@ -39,10 +45,7 @@ export const ResultFigure = styled.figure`
 `;
 
 export const ResultImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  ${fitImage()};
 `;
 
 export const ResultTitle = styled.h3``;

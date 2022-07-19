@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const friendRequestsSlice = createSlice({
   name: 'friendRequests',
   initialState: {
+    isFetched: false,
     pendingRequests: [],
     sentRequests: [],
   },
@@ -21,6 +22,8 @@ const friendRequestsSlice = createSlice({
         userImage: req.profileImg.image,
         userName: req.userName,
       }));
+
+      state.isFetched = true;
     },
 
     sendRequest() {},

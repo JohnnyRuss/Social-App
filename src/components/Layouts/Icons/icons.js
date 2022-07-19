@@ -9,6 +9,12 @@ import {
   BsArrowsFullscreen,
   BsThreeDotsVertical,
   BsFillReplyFill,
+  BsFillPersonLinesFill,
+  BsFillPersonPlusFill,
+  BsFillPersonDashFill,
+  BsFillPersonCheckFill,
+  BsFillPersonXFill,
+  BsFillPersonFill,
 } from 'react-icons/bs';
 
 import {
@@ -23,6 +29,7 @@ import {
   MdUpdate,
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
+  MdPersonOff,
 } from 'react-icons/md';
 
 import {
@@ -37,7 +44,7 @@ import {
 } from 'react-icons/ai';
 
 import { IoIosSearch, IoMdNotifications, IoIosShareAlt, IoIosArrowDown } from 'react-icons/io';
-import { FaFacebookMessenger, FaLaugh, FaUserFriends } from 'react-icons/fa';
+import { FaFacebookMessenger, FaLaugh } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { CgTag } from 'react-icons/cg';
 import { BiError, BiSend } from 'react-icons/bi';
@@ -83,7 +90,13 @@ const ArrowRightRectingle = MdOutlineArrowForwardIos;
 const FullScreenIcon = BsArrowsFullscreen;
 const ReplyIcon = BsFillReplyFill;
 const UpdateIcon = MdUpdate;
-const UserFriendsIcon = FaUserFriends;
+const UserFriendRequestsIcon = BsFillPersonLinesFill;
+const AddToFriendsIcon = BsFillPersonPlusFill;
+const CancelFriendRequestIcon = BsFillPersonDashFill;
+const ConfirmFriendRequestIcon = BsFillPersonCheckFill;
+const DeleteFriendRequestIcon = BsFillPersonXFill;
+const DeleteFriendIcon = MdPersonOff;
+const FriendIcon = BsFillPersonFill;
 
 export {
   LikeIcon,
@@ -126,5 +139,11 @@ export {
   FullScreenIcon,
   ReplyIcon,
   UpdateIcon,
-  UserFriendsIcon,
+  UserFriendRequestsIcon,
+  AddToFriendsIcon,
+  CancelFriendRequestIcon,
+  ConfirmFriendRequestIcon,
+  DeleteFriendRequestIcon,
+  DeleteFriendIcon,
+  FriendIcon,
 };

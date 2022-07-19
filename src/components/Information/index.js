@@ -1,3 +1,9 @@
 export { default as SideBar } from './SideBar';
 export { default as Container } from './Container';
-export { default as InfoBlock } from './InfoBlock';
+export { default as AllBlock } from './AllBlock';
+export { default as ContactAndBasicInfoBlock } from './ContactAndBasicInfoBlock';
+export { default as DetailsAboutYouBlock } from './DetailsAboutYouBlock';
+export { default as FamilyAndRelationShipBlock } from './FamilyAndRelationShipBlock';
+export { default as JobAndEducationBlock } from './JobAndEducationBlock';
+export { default as LifeEventsBlock } from './LifeEventsBlock';
+export { default as LivingPlacesBlock } from './LivingPlacesBlock';

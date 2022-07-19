@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { flexBox, flexProperty, fontSize, fitImage } from '../../../styles/styled';
 
 export const FriendsContainer = styled.div`
-  margin: 5rem 0 3rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5rem;

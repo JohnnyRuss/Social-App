@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+
+import { DOMcontext } from '../../store/context/DOMContext';
 
 import { getAllConversations } from '../../store/reducers/conversationReducer';
 import { setConversation } from '../../store/reducers/chatHeadReducer';
@@ -10,11 +12,13 @@ import ContentItem from './components/ContentItem';
 import Heading from './components/Heading';
 
 function MessengerModal() {
+  const { setActiveMessengerModal } = useContext(DOMcontext);
   const dispatch = useDispatch();
   const conversations = useSelector((state) => state.conversation.conversation.conversations);
   const activeUserId = useSelector((state) => state.userBasics.user._id);
 
   function handleOpenChatHead(id) {
+    setActiveMessengerModal(false);
     dispatch(setConversation(id));
   }
 
@@ -22,9 +26,8 @@ function MessengerModal() {
     dispatch(getAllConversations({ id: activeUserId, process: 'modalProcess' }));
   }, [dispatch, activeUserId]);
 
-
   return (
-    <ModalContainer>
+    <ModalContainer className='modal'>
       <Heading text='chats' withIcon={true} />
       <ContentBox>
         {conversations.map((conversation) => (

@@ -1,32 +1,25 @@
 import styled from 'styled-components';
 import { small_640 } from '../../../media';
 
-export const SearchBarContainer = styled.div`
+export const NavSearchBarContainer = styled.div`
   flex: 2;
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-
-  ${({ flex }) => {
-    return flex
-      ? `
-      flex:${flex};
-      justify-content:flex-end;
-      `
-      : `
-      flex:2;
-      padding: 0 5rem;
-      `;
-  }}
+  margin-left: 5rem;
 
   ${small_640({
     padding: '0 3rem',
   })}
 `;
 
-export const SearchBarWrapper = styled.div`
+export const SearchBarContainer = styled(NavSearchBarContainer)`
+  flex: none;
+`;
+
+export const NavSearchBar = styled.div`
   background: white;
   display: flex;
   justify-content: flex-start;
@@ -37,13 +30,13 @@ export const SearchBarWrapper = styled.div`
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 999;
-
-  ${({ border }) => {
-    return border ? `border:1px solid grey` : ``;
-  }}
 `;
 
-export const IconBox = styled.label`
+export const SearchBar = styled(NavSearchBar)`
+  border: 1px solid grey;
+`;
+
+export const SearchBarLabel = styled.label`
   color: black;
   font-size: 1.6rem;
   cursor: pointer;

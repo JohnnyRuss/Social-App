@@ -75,6 +75,7 @@ export const fitImage = (props) => {
     object-fit: ${props?.fit || 'cover'};
     width: 100%;
     height: 100%;
+    border-radius:inherit;
   `;
 };
 

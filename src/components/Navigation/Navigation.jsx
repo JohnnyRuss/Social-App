@@ -6,17 +6,16 @@ import { useSearchBar } from '../../hooks';
 
 import { Nav } from './components/styled';
 import { UserBadges } from './components';
-import { MessengerModal, NotificationModal, SearchModal } from '../';
-import { Logo, SearchBar } from '../Layouts';
+import { MessengerModal, NotificationModal, SearchModal, FriendRequestsModal } from '../';
+import { Logo, NavigationSearchBar } from '../Layouts';
 
 function Navigation() {
   const {
     activeMessengerModal,
     activeNotificationModal,
-    activateMessengerModal,
-    activateNotificationModal,
+    activeFriendRequestModal,
+    activateSearchBar,
     activeSearchBar,
-    setActiveSearchBar,
   } = useContext(DOMcontext);
 
   const result = useSelector((state) => state.timeline.searchResults);
@@ -26,17 +25,15 @@ function Navigation() {
   return (
     <Nav>
       <Logo />
-      <SearchBar
+      <NavigationSearchBar
+        activateSearchBar={activateSearchBar}
         activeSearchBar={activeSearchBar}
-        setActiveSearchBar={setActiveSearchBar}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
-      <UserBadges
-        activeMessengerModal={activateMessengerModal}
-        activeNotificationModal={activateNotificationModal}
-      />
+      <UserBadges />
       {activeSearchBar && <SearchModal result={result} />}
+      {activeFriendRequestModal && <FriendRequestsModal />}
       {activeMessengerModal && <MessengerModal />}
       {activeNotificationModal && <NotificationModal />}
     </Nav>

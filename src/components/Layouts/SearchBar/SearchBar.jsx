@@ -1,24 +1,22 @@
-import { SearchBarContainer } from './components/styled';
-import SearchField from './components/SearchField';
+import { SearchBarContainer, SearchBar as Bar, Input, SearchBarLabel } from './components/styled';
+import { SearchIcon } from '../Icons/icons';
 
-function SearchBar({
-  activeSearchBar,
-  setActiveSearchBar,
-  setSearchQuery,
-  searchQuery,
-  flex,
-  border,
-}) {
-
+function SearchBar({ setSearchQuery, searchQuery }) {
   return (
-    <SearchBarContainer flex={flex}>
-      <SearchField
-        setActiveSearchBar={setActiveSearchBar}
-        activeSearchBar={activeSearchBar}
-        setSearchQuery={setSearchQuery}
-        searchQuery={searchQuery}
-        border={border}
-      />
+    <SearchBarContainer>
+      <Bar>
+        <SearchBarLabel htmlFor='searchBarLocal'>
+          <SearchIcon />
+        </SearchBarLabel>
+        <Input
+          type='text'
+          placeholder='search on room'
+          id='searchBarLocal'
+          border
+          onChange={(e) => setSearchQuery(e.target.value)}
+          value={searchQuery}
+        />
+      </Bar>
     </SearchBarContainer>
   );
 }

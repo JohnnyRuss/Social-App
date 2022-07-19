@@ -1,25 +1,32 @@
 import { Fragment } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import {
+  Register,
+  LogIn,
+  Restriction,
   Home,
   Profile,
-  LogIn,
   Posts,
   Information,
+  ReviewInfo,
+  JobAndEducationInfo,
+  LivingPlacesInfo,
+  ContactAndBasicInfo,
+  FamilyAndRelationShipInfo,
   Friends,
   MuntualFriends,
-  Photos,
-  Videos,
-  Restriction,
-  Register,
   AllFriends,
   RecentlyAddedFriends,
   FriendsBirthDays,
-  Messenger,
-  ConversationFeed,
+  PendingRequests,
+  SentRequests,
+  Photos,
   AllPhotos,
   Albums,
   ActiveAlbum,
+  Videos,
+  Messenger,
+  ConversationFeed,
 } from './pages';
 
 function App() {
@@ -33,12 +40,20 @@ function App() {
           <Route path='/profile/:userId' element={<Profile />}>
             <Route path='' element={<Posts />} />
             <Route path='posts' element={<Posts />} />
-            <Route path='information' element={<Information />} />
+            <Route path='information' element={<Information />}>
+              <Route path='review' element={<ReviewInfo />} />
+              <Route path='jobAndEducation' element={<JobAndEducationInfo />} />
+              <Route path='livingPlaces' element={<LivingPlacesInfo />} />
+              <Route path='contactAndBasicInformation' element={<ContactAndBasicInfo />} />
+              <Route path='familyAndRelationships' element={<FamilyAndRelationShipInfo />} />
+            </Route>
             <Route path='friends' element={<Friends />}>
               <Route path='muntualFriends' element={<MuntualFriends />} />
               <Route path='allFriends' element={<AllFriends />} />
               <Route path='recentlyAddedFriends' element={<RecentlyAddedFriends />} />
               <Route path='upComingBirthdays' element={<FriendsBirthDays />} />
+              <Route path='pendingRequests' element={<PendingRequests />} />
+              <Route path='sentRequests' element={<SentRequests />} />
             </Route>
             <Route path='photos' element={<Photos />}>
               <Route path='allPhotos' element={<AllPhotos />} />
