@@ -6,6 +6,7 @@ export const FriendsContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5rem;
   row-gap: 2.5rem;
+  text-transform: capitalize;
 `;
 
 export const Friend = styled.div`

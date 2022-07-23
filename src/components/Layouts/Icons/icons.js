@@ -15,6 +15,7 @@ import {
   BsFillPersonCheckFill,
   BsFillPersonXFill,
   BsFillPersonFill,
+  BsFillPhoneVibrateFill,
 } from 'react-icons/bs';
 
 import {
@@ -30,6 +31,9 @@ import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
   MdPersonOff,
+  MdLanguage,
+  MdEmail,
+  MdModeStandby,
 } from 'react-icons/md';
 
 import {
@@ -43,12 +47,20 @@ import {
   AiOutlineMinusCircle,
 } from 'react-icons/ai';
 
-import { IoIosSearch, IoMdNotifications, IoIosShareAlt, IoIosArrowDown } from 'react-icons/io';
-import { FaFacebookMessenger, FaLaugh } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import {
+  IoIosSearch,
+  IoMdNotifications,
+  IoIosShareAlt,
+  IoIosArrowDown,
+  IoIosTransgender,
+} from 'react-icons/io';
+
+import { FaFacebookMessenger, FaLaugh, FaMale, FaFemale, FaBirthdayCake } from 'react-icons/fa';
+import { GiHamburgerMenu, GiLovers } from 'react-icons/gi';
 import { CgTag } from 'react-icons/cg';
 import { BiError, BiSend } from 'react-icons/bi';
 import { ImSpinner8 } from 'react-icons/im';
+import { HiSpeakerphone } from 'react-icons/hi';
 
 const ShareIcon = IoIosShareAlt;
 const CommentIcon = AiOutlineComment;
@@ -97,6 +109,16 @@ const ConfirmFriendRequestIcon = BsFillPersonCheckFill;
 const DeleteFriendRequestIcon = BsFillPersonXFill;
 const DeleteFriendIcon = MdPersonOff;
 const FriendIcon = BsFillPersonFill;
+const ConversationIcon = GiLovers;
+const PhoneIcon = BsFillPhoneVibrateFill;
+const LanguageIcon = MdLanguage;
+const EmailIcon = MdEmail;
+const StandIcon = MdModeStandby;
+const SpeakerIcon = HiSpeakerphone;
+const FemaleIcon = FaFemale;
+const MaleIcon = FaMale;
+const InterestedInIcon = IoIosTransgender;
+const BirthDayIcon = FaBirthdayCake;
 
 export {
   LikeIcon,
@@ -146,4 +168,14 @@ export {
   DeleteFriendRequestIcon,
   DeleteFriendIcon,
   FriendIcon,
+  ConversationIcon,
+  PhoneIcon,
+  LanguageIcon,
+  EmailIcon,
+  StandIcon,
+  SpeakerIcon,
+  MaleIcon,
+  FemaleIcon,
+  InterestedInIcon,
+  BirthDayIcon,
 };

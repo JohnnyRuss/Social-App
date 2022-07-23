@@ -4,6 +4,7 @@ import { flexBox, fitImage, fontSize, color } from '../../../styles/styled';
 export const Request = styled.div`
   ${flexBox()};
   gap: 1rem;
+  text-transform: capitalize;
 `;
 
 export const RequestFigure = styled.figure`

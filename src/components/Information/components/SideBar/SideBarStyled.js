@@ -5,6 +5,7 @@ export const SideBarContainer = styled.div`
   font-size: 1.4rem;
   font-weight: 500;
   padding: 1rem;
+  text-transform: capitalize;
 `;
 
 export const InfoLinksList = styled.ul`

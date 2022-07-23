@@ -8,6 +8,7 @@ export const UserMenuList = styled.ul`
   font-size: 1.4rem;
   font-weight: 500;
   padding-top: 1rem;
+  text-transform: capitalize;
 `;
 
 export const UserMenuListItem = styled.li`

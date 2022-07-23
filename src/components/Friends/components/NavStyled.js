@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { flexBox, flexProperty, fontSize } from '../../../styles/styled';
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+  text-transform: capitalize;
+`;
 
 export const NavList = styled.ul`
   list-style: none;

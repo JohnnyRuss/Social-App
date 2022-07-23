@@ -1,22 +1,25 @@
-import { Fragment, useRef } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
-import { Navigation } from '../../components';
-import Conversation from '../../components/ChatHead/Conversation';
+import { Navigation, Conversation } from '../../components';
 
 import { useRestriction } from '../../hooks';
 
 function Restriction() {
   const activeUser = useRestriction();
   const { pathname } = useLocation();
-  const messagesRout = useRef(pathname.includes('messages'));
+  const [messagesRoute, setMessagesRoute] = useState(false);
+
+  useEffect(() => {
+    setMessagesRoute(pathname.includes('messages'));
+  }, [pathname]);
 
   return (
     <Fragment>
       {activeUser ? (
         <Fragment>
           <Navigation />
-          <Conversation />
+          {!messagesRoute && <Conversation />}
           <Outlet />
         </Fragment>
       ) : (

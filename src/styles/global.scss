@@ -17,7 +17,6 @@ body {
   line-height: 1.2;
   @include collor(whiteColor, true);
   @include collor(blackColor);
-  text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
   position: relative;
 }

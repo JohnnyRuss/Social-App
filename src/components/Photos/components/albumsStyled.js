@@ -6,6 +6,7 @@ export const AlbumsBox = styled.div`
   ${gridAutoFill({ min: '15rem' })};
   gap: 2rem;
   margin: 3rem 0;
+  text-transform: capitalize;
 `;
 
 export const AlbumBox = styled.figure`

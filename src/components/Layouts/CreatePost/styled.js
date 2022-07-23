@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const PostTools = styled.div`
   ${flexBox()};
-  ${flexProperty({ justify: 'space-between' })};
+  ${flexProperty({ justify: 'space-between', align: 'center' })};
   gap: 2rem;
   width: 90%;
   margin: 0 auto;

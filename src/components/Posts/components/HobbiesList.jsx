@@ -2,7 +2,6 @@ import { HobbiesList as Hobbies } from './HobbiesStyled';
 import { HobbiesListItem } from './';
 
 function HobbiesList({ hobbies }) {
-  console.log(hobbies)
   return (
     <Hobbies>
       {hobbies?.map?.((hobby, i) => (

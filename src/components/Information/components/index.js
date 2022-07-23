@@ -38,3 +38,18 @@ export { default as AddFamilyMemberForm } from './UpdateComponents/AddFamilyMemb
 // UPDATE BLOCK REUSEABLE FORMS
 export { default as AddSingleField } from './UpdateComponents/AddSingleField';
 export { default as AddSingleFieldWithDescription } from './UpdateComponents/AddSingleFieldWithDescription';
+
+// INFO COMPONENTS
+export { default as WorkPlace } from './InfoComponents/WorkPlace';
+export { default as Education } from './InfoComponents/Education';
+export { default as LivingPlace } from './InfoComponents/LivingPlace';
+export { default as BirthPlace } from './InfoComponents/BirthPlace';
+export { default as Relationship } from './InfoComponents/Relationship';
+export { default as PhoneNumber } from './InfoComponents/PhoneNumber';
+export { default as Email } from './InfoComponents/Email';
+export { default as Language } from './InfoComponents/Language';
+export { default as ReligianOpinion } from './InfoComponents/ReligianOpinion';
+export { default as PoliticianOpinion } from './InfoComponents/PoliticianOpinion';
+export { default as InterestedIn } from './InfoComponents/InterestedIn';
+export { default as Gender } from './InfoComponents/Gender';
+export { default as BirthDay } from './InfoComponents/BirthDay';

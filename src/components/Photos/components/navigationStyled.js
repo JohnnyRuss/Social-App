@@ -6,4 +6,5 @@ export const Nav = styled.nav`
   align-items: center;
   font-weight: 600;
   font-size: 1.4rem;
+  text-transform: capitalize;
 `;

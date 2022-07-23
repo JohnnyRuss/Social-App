@@ -6,7 +6,7 @@ export const ModalHeading = styled.div`
   ${flexProperty({ align: 'center', justify: 'space-between' })};
   position: relative;
   z-index: 9;
-  ${({ padding }) => (padding ? `padding:0.5rem` : 'padding:0')}
+  ${({ padding }) => (padding ? `padding:1rem` : 'padding:0')}
 `;
 
 export const CloseBTN = styled.button`
@@ -20,6 +20,6 @@ export const CloseBTN = styled.button`
     transform: translate(${!btnPosition ? '50%' : '-50%'}, 50%);
     `;
   }};
-  ${({ btnSize }) => fontSize(btnSize || 'bigSize')};
+  ${({ btnSize }) => fontSize(btnSize || 'largeSize')};
   ${({ btnColor }) => `color: ${color(btnColor || 'whiteColor')}`}
 `;

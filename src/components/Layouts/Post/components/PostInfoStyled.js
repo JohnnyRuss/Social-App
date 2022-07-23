@@ -20,8 +20,12 @@ export const Reactions = styled.div`
 `;
 
 export const ReactionSVG = styled.img`
-  min-width: 1.5rem;
-  max-width: 1.5rem;
+  min-width: 1.8rem;
+  max-width: 1.8rem;
+
+  &:not(:first-child) {
+    margin-left: -1rem;
+  }
 `;
 
 export const SharesAndComments = styled.div`

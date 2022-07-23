@@ -6,7 +6,9 @@ export const ProfileContainer = styled.div`
   position: relative;
   width: 70%;
   min-height: 90vh;
+  text-transform: capitalize;
   margin: 0 auto;
+
   ${smallDesktop_1280({
     width: '80%',
   })}

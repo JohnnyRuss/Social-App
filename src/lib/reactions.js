@@ -12,6 +12,7 @@ export const reactions = [
   {
     src: '/assets/reaction/laughing.svg',
     name: 'laughing',
+    caption: 'ha ha',
     alt: 'laughing reaction icon',
   },
   {

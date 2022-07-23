@@ -3,7 +3,7 @@ import { flexBox, flexProperty, fontSize, color, boxShadowBlack } from '../../..
 
 export const OptionsBTN = styled.button`
   justify-self: flex-end;
-  ${fontSize('bigSize')};
+  ${fontSize('largeSize')};
   cursor: pointer;
   position: relative;
   ${({ showOnHover }) => {
@@ -19,14 +19,14 @@ export const OptionsList = styled.ul`
   list-style: none;
   position: absolute;
   left: 2rem;
-  top: 3rem;
+  top: 2.5rem;
   z-index: 9;
   transform: translate(-100%, 0%);
   ${fontSize('regullarSize')};
   ${flexBox('column')};
   ${flexProperty({ column: 'center' })};
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 8rem 1rem 1rem;
   border-radius: 0.5rem;
   background: ${color('whiteColor')};
   ${boxShadowBlack()};
@@ -34,6 +34,10 @@ export const OptionsList = styled.ul`
 
 export const Option = styled.li`
   ${flexBox()};
-  ${flexProperty({ column: 'center' })};
+  ${flexProperty({ justify: 'flex-start', align: 'center' })};
   gap: 0.5rem;
+
+  & svg {
+    ${fontSize('bigSize')};
+  }
 `;

@@ -13,11 +13,7 @@ export const SideBarContainer = styled.div`
   position: sticky;
   top: 8rem;
   margin-bottom: 8rem;
-
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  text-transform: capitalize;
 
   ${tablet_1000({
     minWidth: '30rem',

@@ -14,6 +14,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+  text-transform: capitalize;
 `;
 
 export const InputEl = styled.input`
@@ -143,6 +144,7 @@ export const AddBTN = styled.button`
   letter-spacing: 0.5px;
   gap: 1rem;
   cursor: pointer;
+  text-transform: capitalize;
 `;
 
 export const CalendarBox = styled.div`
@@ -221,6 +223,7 @@ export const Text = styled.p`
 
 export const Title = styled.h3`
   font-size: 1.4rem;
+  text-transform: capitalize;
 `;
 
 export const IconBox = styled.span`

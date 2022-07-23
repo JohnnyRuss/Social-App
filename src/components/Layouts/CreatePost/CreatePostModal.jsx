@@ -14,7 +14,7 @@ function CreatePostModal({
     <Modal
       openModal={openModal}
       closeModal={closeModal}
-      identifier={<UserIdentifier />}
+      identifier={<UserIdentifier dimention={['5rem', '5rem']} size="1.6rem"/>}
       btnColor='blackColor'
       btnPosition='right'>
       <ModalContent

@@ -26,7 +26,7 @@ export const ContentBox = styled.div`
   max-width: 80%;
   ${flexBox('column')};
   gap: 0.2rem;
-  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  padding: 0.8rem 4rem 0.8rem 1.2rem;
   border-radius: 1rem;
   background: ${color('whiteShadeColor')};
 
@@ -41,5 +41,5 @@ export const UserName = styled.h3`
 `;
 
 export const Text = styled.p`
-  ${fontSize('smallerSize')}
+  ${fontSize('smallSize')}
 `;

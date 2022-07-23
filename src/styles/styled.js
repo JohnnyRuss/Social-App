@@ -1,6 +1,7 @@
 const colors = {
   whiteColor: 'rgba(255, 255, 255, 1)',
   whiteShadeColor: 'rgba(242, 242, 242, 1)',
+  lightGreyColor: 'rgba(170, 170, 170, 1)',
   darkGreyColor: 'rgba(42, 42, 42, 0.6)',
   blackColor: '#181818',
   blueColor: 'rgba(3, 85, 191, 1)',
